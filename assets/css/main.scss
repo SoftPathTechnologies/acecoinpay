@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Ubuntu:ital,wght@1,700&display=swap');
+
+@import 'variables.scss';
+@import 'mixins.scss';
+
+html{
+    font-size: 16px;
+}
+
+body{
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.wrapper{
+    max-width: 1200px;
+    position: relative;
+    margin: 40px auto;
+    padding-top: 6em;
+    font-family: $poppins;
+    background: rgba(255, 255, 255,.9);
+    padding: 3rem;
+   
+}
+
+.form{
+    &-header{
+        @include setFlex(flex, center, space-between, initial);
+        margin-bottom: 5em;
+        .logo{
+            @include setFlex(flex, center, space-between, initial);
+            &-circle{
+                height: 3em;
+                width: 3em;
+                display: block;
+                background-color: $blue_bg;
+                border-radius: 50%;
+            }
+            &-card{
+                margin: 10px 10px 0 0; 
+                padding: 5px 15px;
+                color: #fff;
+            }
+            h1{
+                font-size: 1.75em;
+                font-weight: 700;
+                margin-left: .6em;
+                color: $text_one;
+                .lean{
+                    font-weight: 300;
+                }
+            }
+        }
+        .timer{
+            font-size: 1.35em;
+            font-weight: 600;
+
+            &-box{
+                background-color: $dark_bg;
+                color:#fff;
+                height: 1.5em;
+                width: 1.3em;
+                @include setFlex(inline-flex, center, center, initial);
+                border-radius: 10%;
+                margin-left: -4px;
+            }
+
+            &-divider{
+                position: relative;
+                right: 2px;
+            }
+        }
+    }
+
+    &-body{
+        form{
+            .input-group{
+                margin-bottom: 2em;
+                .header{
+                    @include setFlex(flex, center, space-between, initial);
+                    margin-bottom: 1.8em;
+                    .description{
+                        .title{
+                            text-transform: capitalize;
+                            font-size: 1.1em;
+                            font-weight: 700;
+                            color: $text_one;
+                            margin-bottom: .4em;
+                        }
+                        .desc{
+                            text-transform: capitalize;
+                            font-size: .77em;
+                            font-weight: 500;
+                            color: $text_two;
+                        }
+                    }
+
+                    button.edit{
+                        @include setFlex(flex, center, space-between, initial);
+                        color: $blue_bg;
+                        svg{
+                            height: .9em;
+                            fill: $blue_bg;
+                        }
+
+                        .btn-desc{
+                            display: block;
+                            margin-left: .6em;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .grp{
+                    @include setFlex(flex, center, space-between, initial);
+                    width: 400px;  
+                }
+                .divider{
+                    margin: .8em;
+                    font-size: 1.2em;
+                    font-weight: 800;
+                    color: $text_one;
+                }
+                .main{
+                    margin-top: 1em;
+                    position: relative;
+                    svg{
+                        position: absolute;
+                        fill: $text_two;
+                        right: 1.2em;
+                        height: 1.5em;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                      
+                    }
+                    img{
+                        position: absolute;
+                        &.leading-icon{
+                            left: 1.2em;
+                            height: 2em;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                        }
+                        
+                    }
+
+                    input{
+                        border: 2px solid $input-border;
+                        width: 100%;
+                        padding: 1em 4em ;
+                        padding-left: 5em;
+                        outline-color: $active-border;
+                        border-radius: 6px;
+                        font-size: 1.2em;
+                        font-weight: 500;
+                        background: linear-gradient(45deg, #f8faf9, transparent);
+                        &::placeholder{
+                            font-weight: 400;
+                            opacity: .5;
+                        }
+                    }
+                }
+                &.__col{
+                    @include setFlex(flex, center, space-between, initial);
+                    .header{
+                        margin-bottom: 0;
+                    }
+                    .main{
+                        width: 400px;
+                        margin-top: 0;
+                        input{
+                            text-align: center;
+                            padding-left: 0;
+                            padding-right: 0;
+                            background: none;
+                            color: $active-border;
+                            &:focus{
+                                background: #edf3fe;
+                            }
+                        }
+                        input[type="password"]{
+                            text-align: left;
+                            padding-left: 1.5em;
+                            font-weight: 800;
+                            letter-spacing: .2em;
+                        }
+                        
+                    }
+                }
+               
+            }
+            .btn_submit{
+                width: 100%;
+                background-color: $blue_bg;
+                padding: 1.2em 0;
+                color: #fff;
+                border-radius: .8em;
+                font-size: 20px;
+                transition: all 260ms ease-in-out;
+
+                &:hover{
+                    background-color: $active-border;
+                }
+            }
+        }
+    }
+}

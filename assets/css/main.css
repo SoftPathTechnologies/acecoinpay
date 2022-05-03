@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Ubuntu:ital,wght@1,700&display=swap");
+html {
+  font-size: 16px;
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.wrapper {
+  max-width: 1200px;
+  position: relative;
+  margin: 40px auto;
+  padding-top: 6em;
+  font-family: "Poppins", san-serif;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-bottom: 5em;
+}
+.form-header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.form-header .logo-circle {
+  height: 3em;
+  width: 3em;
+  display: block;
+  background-color: #035fff;
+  border-radius: 50%;
+}
+.form-header .logo-card {
+  margin: 10px 10px 0 0;
+  padding: 5px 15px;
+  color: #fff;
+}
+.form-header .logo h1 {
+  font-size: 1.75em;
+  font-weight: 700;
+  margin-left: 0.6em;
+  color: #05365c;
+}
+.form-header .logo h1 .lean {
+  font-weight: 300;
+}
+.form-header .timer {
+  font-size: 1.35em;
+  font-weight: 600;
+}
+.form-header .timer-box {
+  background-color: #17254c;
+  color: #fff;
+  height: 1.5em;
+  width: 1.3em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: initial;
+  border-radius: 10%;
+  margin-left: -4px;
+}
+.form-header .timer-divider {
+  position: relative;
+  right: 2px;
+}
+.form-body form .input-group {
+  margin-bottom: 2em;
+}
+.form-body form .input-group .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  margin-bottom: 1.8em;
+}
+.form-body form .input-group .header .description .title {
+  text-transform: capitalize;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #05365c;
+  margin-bottom: 0.4em;
+}
+.form-body form .input-group .header .description .desc {
+  text-transform: capitalize;
+  font-size: 0.77em;
+  font-weight: 500;
+  color: #8e96a3;
+}
+.form-body form .input-group .header button.edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  color: #035fff;
+}
+.form-body form .input-group .header button.edit svg {
+  height: 0.9em;
+  fill: #035fff;
+}
+.form-body form .input-group .header button.edit .btn-desc {
+  display: block;
+  margin-left: 0.6em;
+  font-weight: 500;
+}
+.form-body form .input-group .grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  width: 400px;
+}
+.form-body form .input-group .divider {
+  margin: 0.8em;
+  font-size: 1.2em;
+  font-weight: 800;
+  color: #05365c;
+}
+.form-body form .input-group .main {
+  margin-top: 1em;
+  position: relative;
+}
+.form-body form .input-group .main svg {
+  position: absolute;
+  fill: #8e96a3;
+  right: 1.2em;
+  height: 1.5em;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.form-body form .input-group .main img {
+  position: absolute;
+}
+.form-body form .input-group .main img.leading-icon {
+  left: 1.2em;
+  height: 2em;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.form-body form .input-group .main input {
+  border: 2px solid rgba(129, 129, 156, 0.5);
+  width: 100%;
+  padding: 1em 4em;
+  padding-left: 5em;
+  outline-color: #0077B6;
+  border-radius: 6px;
+  font-size: 1.2em;
+  font-weight: 500;
+  background: linear-gradient(45deg, #f8faf9, transparent);
+}
+.form-body form .input-group .main input::placeholder {
+  font-weight: 400;
+  opacity: 0.5;
+}
+.form-body form .input-group.__col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+}
+.form-body form .input-group.__col .header {
+  margin-bottom: 0;
+}
+.form-body form .input-group.__col .main {
+  width: 400px;
+  margin-top: 0;
+}
+.form-body form .input-group.__col .main input {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  background: none;
+  color: #0077B6;
+}
+.form-body form .input-group.__col .main input:focus {
+  background: #edf3fe;
+}
+.form-body form .input-group.__col .main input[type=password] {
+  text-align: left;
+  padding-left: 1.5em;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+.form-body form .btn_submit {
+  width: 100%;
+  background-color: #035fff;
+  padding: 1.2em 0;
+  color: #fff;
+  border-radius: 0.8em;
+  font-size: 20px;
+  transition: all 260ms ease-in-out;
+}
+.form-body form .btn_submit:hover {
+  background-color: #0077B6;
+}
+
+/*# sourceMappingURL=main.css.map */
