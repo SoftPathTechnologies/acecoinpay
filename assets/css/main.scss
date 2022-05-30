@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Ubuntu:ital,wght@1,700&display=swap');
-
-@import 'variables.scss';
-@import 'mixins.scss';
-
-html{
+@import 'variables';
+@import 'mixins';
+html {
     font-size: 16px;
 }
 
-body{
+body {
     background-image: url(../img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,192 +14,206 @@ body{
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
+
 
 /* Firefox */
+
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
-.wrapper{
+.wrapper {
     max-width: 1200px;
     position: relative;
     margin: 40px auto;
     padding-top: 6em;
     font-family: $poppins;
-    background: rgba(255, 255, 255,.9);
+    background: rgba(255, 255, 255, );
     padding: 3rem;
-   
+    border-radius: 2px;
+    backdrop-filter: blur(15%);
 }
 
-.form{
-    &-header{
-        @include setFlex(flex, center, space-between, initial);
+.form {
+    &-header {
+        @include setFlex(flex,
+        center,
+        space-between,
+        initial);
         margin-bottom: 5em;
-        .logo{
-            @include setFlex(flex, center, space-between, initial);
-            &-circle{
+        .logo {
+            @include setFlex(flex,
+            center,
+            space-between,
+            initial);
+            &-circle {
                 height: 3em;
                 width: 3em;
                 display: block;
                 background-color: $blue_bg;
                 border-radius: 50%;
             }
-            &-card{
-                margin: 10px 10px 0 0; 
+            &-card {
+                margin: 10px 10px 0 0;
                 padding: 5px 15px;
                 color: #fff;
             }
-            h1{
+            h1 {
                 font-size: 1.75em;
                 font-weight: 700;
                 margin-left: .6em;
                 color: $text_one;
-                .lean{
+                .lean {
                     font-weight: 300;
                 }
             }
         }
-        .timer{
+        .timer {
             font-size: 1.35em;
             font-weight: 600;
-
-            &-box{
+            &-box {
                 background-color: $dark_bg;
-                color:#fff;
+                color: #fff;
                 height: 1.5em;
                 width: 1.3em;
-                @include setFlex(inline-flex, center, center, initial);
+                @include setFlex(inline-flex,
+                center,
+                center,
+                initial);
                 border-radius: 10%;
                 margin-left: -4px;
             }
-
-            &-divider{
+            &-divider {
                 position: relative;
                 right: 2px;
             }
         }
     }
-
-    &-body{
-        form{
-            .input-group{
+    &-body {
+        form {
+            .input-group {
                 margin-bottom: 2em;
-                .header{
-                    @include setFlex(flex, center, space-between, initial);
+                .header {
+                    @include setFlex(flex,
+                    center,
+                    space-between,
+                    initial);
                     margin-bottom: 1.8em;
-                    .description{
-                        .title{
+                    .description {
+                        .title {
                             text-transform: capitalize;
                             font-size: 1.1em;
                             font-weight: 700;
                             color: $text_one;
                             margin-bottom: .4em;
                         }
-                        .desc{
+                        .desc {
                             text-transform: capitalize;
                             font-size: .77em;
                             font-weight: 500;
                             color: $text_two;
                         }
                     }
-
-                    button.edit{
-                        @include setFlex(flex, center, space-between, initial);
+                    button.edit {
+                        @include setFlex(flex,
+                        center,
+                        space-between,
+                        initial);
                         color: $blue_bg;
-                        svg{
+                        svg {
                             height: .9em;
                             fill: $blue_bg;
                         }
-
-                        .btn-desc{
+                        .btn-desc {
                             display: block;
                             margin-left: .6em;
                             font-weight: 500;
                         }
                     }
                 }
-                .grp{
-                    @include setFlex(flex, center, space-between, initial);
-                    width: 400px;  
+                .grp {
+                    @include setFlex(flex,
+                    center,
+                    space-between,
+                    initial);
+                    width: 400px;
                 }
-                .divider{
+                .divider {
                     margin: .8em;
                     font-size: 1.2em;
                     font-weight: 800;
                     color: $text_one;
                 }
-                .main{
+                .main {
                     margin-top: 1em;
                     position: relative;
-                    svg{
+                    svg {
                         position: absolute;
                         fill: $text_two;
                         right: 1.2em;
                         height: 1.5em;
                         top: 50%;
                         transform: translate(0, -50%);
-                      
                     }
-                    img{
+                    img {
                         position: absolute;
-                        &.leading-icon{
+                        &.leading-icon {
                             left: 1.2em;
                             height: 2em;
                             top: 50%;
                             transform: translate(0, -50%);
                         }
-                        
                     }
-
-                    input{
+                    input {
                         border: 2px solid $input-border;
                         width: 100%;
-                        padding: 1em 4em ;
+                        padding: 1em 4em;
                         padding-left: 5em;
                         outline-color: $active-border;
                         border-radius: 6px;
                         font-size: 1.2em;
                         font-weight: 500;
                         background: linear-gradient(45deg, #f8faf9, transparent);
-                        &::placeholder{
+                        &::placeholder {
                             font-weight: 400;
                             opacity: .5;
                         }
                     }
                 }
-                &.__col{
-                    @include setFlex(flex, center, space-between, initial);
-                    .header{
+                &.__col {
+                    @include setFlex(flex,
+                    center,
+                    space-between,
+                    initial);
+                    .header {
                         margin-bottom: 0;
                     }
-                    .main{
+                    .main {
                         width: 400px;
                         margin-top: 0;
-                        input{
+                        input {
                             text-align: center;
                             padding-left: 0;
                             padding-right: 0;
                             background: none;
                             color: $active-border;
-                            &:focus{
+                            &:focus {
                                 background: #edf3fe;
                             }
                         }
-                        input[type="password"]{
+                        input[type="password"] {
                             text-align: left;
                             padding-left: 1.5em;
                             font-weight: 800;
                             letter-spacing: .2em;
                         }
-                        
                     }
                 }
-               
             }
-            .btn_submit{
+            .btn_submit {
                 width: 100%;
                 background-color: $blue_bg;
                 padding: 1.2em 0;
@@ -209,10 +221,229 @@ input[type=number] {
                 border-radius: .8em;
                 font-size: 20px;
                 transition: all 260ms ease-in-out;
-
-                &:hover{
+                &:hover {
                     background-color: $active-border;
                 }
+            }
+        }
+    }
+}
+
+.checkout {
+    position: relative;
+    height: 100%;
+    width: 90%;
+    float: left;
+    .blu {
+        display: block;
+        height: 1.5em;
+        width: 5em;
+        background-color: $blue_bg;
+        position: absolute;
+        top: -7px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .credit-card {
+        width: 16em;
+        height: 23.4em;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), #fff);
+        padding: 2em;
+        border-radius: 1em;
+        box-shadow: 0px 4px 14px 2px rgb(142 142 142/ 15%);
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        overflow: hidden;
+        z-index: 99;
+        backdrop-filter: blur(15px);
+        &-header {
+            position: relative;
+            @include setFlex(flex,
+            center,
+            space-between,
+            initial);
+            margin-bottom: 8em;
+            img {
+                height: 1.8em;
+            }
+        }
+        &-body {
+            position: relative;
+            color: $text_one;
+            span {
+                display: block;
+            }
+            .holder {
+                text-transform: capitalize;
+                font-size: .95em;
+                font-weight: 700;
+                margin-bottom: .5em;
+                color: $text_one;
+            }
+            .card-digits {
+                display: flex;
+                margin-bottom: .5em;
+                .hidden-digits {
+                    @include setFlex(flex,
+                    center,
+                    initial,
+                    initial);
+                    .circle {
+                        height: .5em;
+                        width: .5em;
+                        border-radius: 50%;
+                        background: $dark_bg;
+                        margin-right: .4em;
+                    }
+                }
+                .visible-digits {
+                    font-size: 1.1em;
+                    font-weight: 700;
+                    margin-left: 1em;
+                }
+            }
+        }
+        &-footer {
+            @include setFlex(flex,
+            center,
+            space-between,
+            initial);
+            position: relative;
+            top: 1.4em;
+            .expiry {
+                font-size: 1em;
+                font-weight: 600;
+            }
+            .logo {
+                height: 2.5em;
+            }
+        }
+        &-design {
+            height: 700px;
+            width: 700px;
+            border: 1px solid #ebebeb;
+            border-radius: 50%;
+            @include setFlex(flex,
+            center,
+            center,
+            initial);
+            position: absolute;
+            top: 3.5em;
+            z-index: -1;
+            .inner {
+                display: inline-block;
+                width: 550px;
+                height: 550px;
+                border: inherit;
+                border-radius: inherit;
+            }
+        }
+    }
+    &-details {
+        background-color: #f0f3f8;
+        width: 100%;
+        height: 82%;
+        border-radius: 1em;
+        position: absolute;
+        bottom: 0;
+        .purchase-data {
+            position: relative;
+            padding: 2em;
+            top: 15.5em;
+            .data {
+                @include setFlex(flex,
+                center,
+                space-between,
+                initial);
+                text-transform: capitalize;
+                font-size: 1em;
+                color: $text_two;
+                margin-bottom: .7em;
+                .title {
+                    font-size: .85em;
+                    font-weight: 500;
+                }
+                .value {
+                    color: $text_one;
+                    font-weight: 600;
+                    margin-left: .6em;
+                }
+            }
+        }
+        .divider {
+            position: absolute;
+            bottom: 7.4em;
+            width: 100%;
+            border: 1px dashed #d3d3d3;
+            display: flex;
+            align-items: center;
+            .left,
+            .right {
+                position: absolute;
+                width: 2.65em;
+                height: 2.65em;
+                border-radius: 50%;
+                background-color: #fff;
+            }
+            .left {
+                left: -25px;
+            }
+            .right {
+                right: -25px;
+            }
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2em;
+                // background-color: #f0f3f8;
+            }
+        }
+        .purchase-total {
+            position: absolute;
+            bottom: 1.4em;
+            width: 100%;
+            padding: 0 2em;
+            @include setFlex(flex,
+            center,
+            space-between,
+            initial);
+            .total {
+                .desc {
+                    color: #8e96a3;
+                    font-size: .9em;
+                    font-weight: 500;
+                }
+                .t-amount {
+                    @include setFlex(flex,
+                    center,
+                    initial,
+                    initial);
+                    color: $text_one;
+                    .amount {
+                        font-size: 2em;
+                        font-weight: 700;
+                        sub {
+                            position: relative;
+                            font-size: .6em;
+                            bottom: 1px;
+                            font-weight: 600;
+                        }
+                    }
+                    .symbol {
+                        position: relative;
+                        font-size: 1.1em;
+                        top: 1px;
+                        font-weight: 600;
+                        margin-left: .2em;
+                        color: #8e96a3;
+                    }
+                }
+            }
+            img {
+                height: 1.8em;
             }
         }
     }

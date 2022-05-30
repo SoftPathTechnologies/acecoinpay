@@ -8,16 +8,15 @@
     <title>ACECOIN Pay</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="assets/css/tailwind.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
 
-    <div class="wrapper grid grid-cols-12">
+    <div class="wrapper grid grid-cols-12 gap-8">
         <div class="col-span-12 md:col-span-8">
             <div class="form">
                 <header class="form-header">
@@ -91,7 +90,7 @@
                             </div>
                             <div class="main">
                                 <input type="number" name="" placeholder="327" id="">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 210" style="enable-background: new 0 0 210 210;" xml:space="preserve">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 210" style="enable-background: new 0 0 210 210;" xml:space="preserve">
                                     <g id="XMLID_16_">
                                         <path
                                             id="XMLID_17_"
@@ -155,7 +154,7 @@
                                     <g></g>
                                     <g></g>
                                 </svg>
-                                
+
                             </div>
                         </div>
                         <div class="input-group __col">
@@ -175,7 +174,7 @@
                                     <input type="number" value="22" name="" placeholder="YY" id="">
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="input-group __col">
                             <div class="header">
@@ -187,7 +186,7 @@
                             </div>
                             <div class="main">
                                 <input type="password" name="" placeholder="***********" id="">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 210" style="enable-background: new 0 0 210 210;" xml:space="preserve">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 210 210" style="enable-background: new 0 0 210 210;" xml:space="preserve">
                                     <g id="XMLID_16_">
                                         <path
                                             id="XMLID_17_"
@@ -251,16 +250,77 @@
                                     <g></g>
                                     <g></g>
                                 </svg>
-                                
+
                             </div>
                         </div>
-                       <button class="btn_submit">Pay Now</button>
+                        <button class="btn_submit">Pay Now</button>
                     </form>
                 </section>
             </div>
         </div>
         <div class="col-span-12 md:col-span-4">
-
+            <div class="checkout">
+                <span class="blu"></span>
+                <div class="credit-card">
+                    <div class="credit-card-header">
+                        <img src="assets/img/chip.png" alt="chip" srcset="">
+                        <img src="assets/img/wifi.png" alt="wifi" srcset="">
+                    </div>
+                    <div class="credit-card-body">
+                        <span class="holder">Obe Promise</span>
+                        <div class="card-digits">
+                            <div class="hidden-digits">
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                            </div>
+                            <div class="visible-digits">3456</div>
+                        </div>
+                    </div>
+                    <div class="credit-card-footer">
+                        <span class="expiry">09/22</span>
+                        <img src="assets/svg/mastercard-2.svg" class="logo" alt="" srcset="">
+                    </div>
+                    <div class="credit-card-design">
+                        <span class="inner"></span>
+                    </div>
+                </div>
+                <div class="checkout-details">
+                    <div class="purchase-data">
+                        <div class="data">
+                            <span class="title">Company</span>
+                            <span class="value">Apple</span>
+                        </div>
+                        <div class="data">
+                            <span class="title">Order Number</span>
+                            <span class="value">1266201</span>
+                        </div>
+                        <div class="data">
+                            <span class="title">Product</span>
+                            <span class="value">MacBook Air</span>
+                        </div>
+                        <div class="data">
+                            <span class="title">VAT (20%)</span>
+                            <span class="value">$100.00</span>
+                        </div>
+                    </div>
+                    <div class="divider">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                    <div class="purchase-total">
+                        <div class="total">
+                            <span class="desc">Amount to Pay</span>
+                            <div class="t-amount">
+                                <h1 class="amount">549<sub>.99</sub></h1>
+                                <span class="symbol">USD</span>
+                            </div>
+                        </div>
+                        <img src="assets/img/docket.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
